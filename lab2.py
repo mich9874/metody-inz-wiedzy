@@ -72,3 +72,18 @@ def determinant_3x3(matrix):
 matrix = [[1, 4, 5], [2, 1, 6], [0, 3, 2]]
 det = determinant_3x3(matrix)
 print("Wyznaczik jest równy: ",det)
+
+def transpose(matrix):
+    # inicjalizacja macierzy wynikowej
+    result = [[0 for j in range(len(matrix))] for i in range(len(matrix[0]))]
+
+    # transponowanie macierzy
+    for i in range(len(matrix)):
+        for j in range(len(matrix[0])):
+            result[j][i] = matrix[i][j]
+
+    return result
+
+matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+transposed = transpose(matrix)
+print(transposed)
